@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    <title>A 313</title>
+</head>
+<style>
+    body {
+        background-image:url(background-image.jpg);
+        background-size: cover;
+    }
+    .header-logo img {
+        width: 85px;
+    }
+    .container {
+        margin: 0px 166px ;
+    }
+    .header-line {
+        padding-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .phone img {
+        width: 40px;
+    }
+    .whatsap img {
+        width: 40px;
+    }
+    .nav-item {
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+        margin-right: 25px;
+    }
+    .nav-item:hover {
+        text-decoration: underline;
+        text-decoration-color: #7CFC00;
+        text-decoration-thickness: 1px;
+        text-decoration-style: solid;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 3px;
+
+    }
+    .number {
+        color: black;
+        text-decoration: none;
+
+    }
+    .phone {
+        display: flex;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-line">
+                <div class="header-logo">
+                    <a href="@">
+                        <img src="logo.png" alt="logo">
+                    </a>
+                </div>
+                <div class="nav">
+                    <a class="nav-item" href="@">ОБО МНЕ</a>
+                    <a class="nav-item" href="@">УСЛУГИ</a>
+                    <a class="nav-item" href="@">ПОРТФОЛИО</a>
+                </div>
+                <div class="whatsap">
+                    <a href="@">
+                        <img src="whatsap.png" alt="whatsap">
+                    </a>
+                </div>
+                <div class="phone">
+                    <div class="phone-img">
+                    <a href="@">
+                        <img src="phone.png" alt="phone">
+                    </a>
+                    </div>
+                    <div class="phone-text">
+                        <a class="number" href="@">+380632107233</a>
+                    </div>
+                </div>
+                <select id="language-dropdown" onchange="changeLanguage(this)">
+                    <option value="index_en.html">Ua</option>
+                    <option value="index_de.html">De</option>
+                    <option value="index_fr.html">En</option>
+                    <option value="index_es.html">Ru</option>
+                </select>
+
+            </div>
+        </div>    
+    </div>
+</body>
+</html>

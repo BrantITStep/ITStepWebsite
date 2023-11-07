@@ -3,64 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo.png" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="logo.png">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.ico">    
     <title>A 313</title>
+    <style>    
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-image: url("background.png");
+            background-size: cover;
+            overflow-y: scroll;
+        }
+        .header {
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+        .header-logo img {
+            width: 85px;
+        }
+        .container {
+            margin: 0px auto;
+            max-width: 1100px;
+        }
+        .header-line {
+            padding-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .phone img {
+            width: 15px;
+        }
+        .whatsap {
+            padding-top: 2px;
+            padding-left: 4px;
+            padding-right: 4px;
+            box-shadow: 0 0 0 1px gray;
+            border-radius: 5px;
+            margin-right: 10px;
+            transition: box-shadow 0.4s linear;
+        }
+        .whatsap img {
+            width: 28px;
+            padding-top: 2px;
+        }
+        .nav {
+            justify-content: space-around;
+            display: flex;
+            align-items: center;
+        }
+        .nav-item {
+            text-decoration: none;
+            margin-right: 25px;
+            color: gray;
+            white-space: nowrap;
+            overflow: visible;
+            position: relative;
+            transition: color 0.3s linear;
+        }
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -5px;
+            background: orchid;
+            height: 1.5px;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+            text-underline-offset: 8px;
+        }
+        .nav-item:hover {
+            color: #333333;
+        }
+        .nav-item:hover::after {
+            transform: scaleX(1);
+        }
+
+        .whatsap:hover, .phone:hover, #language-dropdown:hover {
+            box-shadow: 0 0 0 2px orchid;
+        }
+
+        .contacts {
+            display: flex;
+            align-items: center;
+        }
+        .number {
+            text-decoration: none;
+            color: gray;
+        }
+        .phone {
+            display: flex;
+            align-items: center;
+            box-shadow: 0 0 0 1px gray; 
+            border-radius: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            padding-bottom: 3px;
+            margin-right: 10px;
+            transition: box-shadow 0.4s linear;
+        }
+        #language-dropdown {
+            border: none;
+            box-shadow: 0 0 0 1px gray;
+            border-radius: 5px;
+            padding: 5px 10px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            color: gray;
+            background-color: transparent;
+            font-size: 0.9em;
+            font-weight: 200;
+            transition: box-shadow 0.4s linear;
+        }
+        #language-dropdown:hover {
+            cursor: pointer;
+            box-shadow: 0 0 0 2px orchid;
+        }
+        #language-dropdown:focus {
+            border-color: orchid;
+            outline: none;
+        }
+        #language-dropdown::-ms-expand {
+            display: none;
+        }
+        #language-dropdown option {
+            padding: 5px;
+            background-color: transparent;
+            color: gray;
+        }
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/Montserrat-ExtraLight') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/Montserrat-Bold.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('fonts/Montserrat-Italic.ttf') format('truetype');
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .maintext {
+            color: #333333;
+            margin-left: 160px;
+            width: 50%;
+            box-shadow: 0 0 0 1px white; 
+            border-radius: 5px;
+        }
+        .maintext h1 {
+            font-family: 'Montserrat-ExtraLight', sans-serif;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+
+        .maintext h4 a {
+            margin-top: 0;
+            text-decoration: none;
+            color: gray;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        h2 {
+            font-family: 'Montserrat-ExtraLight', sans-serif;
+            font-weight: 300; 
+        }
+    </style>
 </head>
-<style>    
-    body {
-        background-image: url("background-image.jpg");
-        background-size: cover;
-    }
-    .header {
-        font-size: 1.5em;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-weight: 300;
-    }
-    .header-logo img {
-        width: 85px;
-    }
-    .container {
-        margin: 0px 166px;
-    }
-    .header-line {
-        padding-top: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .phone img {
-        width: 15px;
-        padding-right: 5px;
-        padding-top: 8px;
-    }
-    .whatsap img {
-        width: 25px;
-    }
-    .nav-item {
-        text-decoration: none;
-        margin-right: 25px;
-        color: gray;
-    }
-    .nav-item:hover {
-        text-decoration: underline;
-        text-decoration-color: #7CFC00;
-        text-decoration-style: solid;
-        text-decoration-thickness: 4px;
-        text-underline-offset: 8px;
-
-    }
-    .number {
-        text-decoration: none;
-        color: gray;
-
-    }
-    .phone {
-        display: flex;
-        align-items: center;
-    }
-</style>
 <body>
     <div class="header">
         <div class="container">
@@ -75,35 +203,36 @@
                     <a class="nav-item" href="@">ПОСЛУГИ</a>
                     <a class="nav-item" href="@">ПОРТФОЛІО</a>
                 </div>
-                <div class="whatsap">
-                    <a href="@">
-                        <img src="whatsap.png" alt="whatsap">
-                    </a>
-                </div>
-                <div class="phone">
-                    <div class="phone-img">
-                    <a href="@">
-                        <img src="phone.png" alt="phone">
-                    </a>
+                <div class="contacts">
+                    <div class="whatsap">
+                        <a href="@">
+                            <img src="whatsap.png" alt="whatsap">
+                        </a>
                     </div>
-                    <div class="phone-text">
-                        <a class="number" href="@">+380632107233</a>
+                    <div class="phone">
+                        <div class="phone-img">
+                            <a href="@">
+                                <img src="phone.png" alt="phone">
+                            </a>
+                        </div>
+                        <div class="phone-text">
+                            <a class="number" href="@">+380632107233</a>
+                        </div>
                     </div>
+                    <select class="language" id="language-dropdown" onchange="changeLanguage(this)">
+                        <option value="index_en.html">Ua</option>
+                        <option value="index_de.html">De</option>
+                        <option value="index_fr.html">En</option>
+                        <option value="index_es.html">Ru</option>
+                    </select>
                 </div>
-                <select id="language-dropdown" onchange="changeLanguage(this)">
-                    <option value="index_en.html">Ua</option>
-                    <option value="index_de.html">De</option>
-                    <option value="index_fr.html">En</option>
-                    <option value="index_es.html">Ru</option>
-                </select>
-
             </div>
         </div>    
     </div>
-    <h1>
-        Створення веб-сайтів, які стануть вашим відображенням у цифровому світі.
-        Розкажіть світу про себе.
-
-    </h1>
+    <div class="maintext">
+        <h1 class="maintexth1">Створення веб-сайтів для Німеччини<sup>*</sup> та Європи</h1>
+        <h4 class="maintexth4a"><a href="path_to_your_new_html_page.html"><sup>*</sup>з урахуванням місцевого законодавства</a></h4>        <h2>Послуги інтернет просування, підтримки та обслуговування WEB продуктів.<h2>
+        <h2>Заповніть форму з описом ваших побажань, та ми якнайшвидше зв'яжемось з вами.</h2>
+    </div>
 </body>
 </html>
